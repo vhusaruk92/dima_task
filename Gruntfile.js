@@ -56,14 +56,26 @@ module.exports=function(grunt){
 		  },
 		},
 
+		watch: {
+			css: {
+			    files: ['**/*.css', '**/*.less'],
+			    tasks: ['less', 'copy'],
+			},
+			scripts: {
+			    files: ['**/*.js'],
+			    tasks: ['concat', 'uglify', 'copy', 'watch'],
+			},
+		},
+
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 
 
-	grunt.registerTask('default',['concat', 'uglify', 'less', 'copy']);
+	grunt.registerTask('default',['concat', 'uglify', 'less', 'copy', 'watch']);
 
 };

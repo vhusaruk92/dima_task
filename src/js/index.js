@@ -6,6 +6,10 @@ $(document).ready(function() {
                 speed:600,slideWidth:200
             });  
           });
+
+
+
+
                 $( "div#list" ).on({
                 click: function() {
                 $( this ).siblings("#unvisible").toggleClass("unvisible");
