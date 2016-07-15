@@ -71,6 +71,18 @@ module.exports=function(grunt){
  			},
 		},
 
+		connect: {
+		    server: {
+		      options: {
+		        port: 9001,
+		        base: 'temp/.',
+		        open:true,
+		        protocol:'http',
+		        keepalive: true
+		      }
+		    },
+		},
+
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-concat');
@@ -78,8 +90,9 @@ module.exports=function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-connect');
 
 
-	grunt.registerTask('default',['concat', 'uglify', 'less', 'copy', 'watch']);
+	grunt.registerTask('default',['concat', 'uglify', 'less', 'copy','connect', 'watch']);
 
 };
