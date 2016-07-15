@@ -57,14 +57,18 @@ module.exports=function(grunt){
 		},
 
 		watch: {
-			css: {
-			    files: ['**/*.css', '**/*.less'],
-			    tasks: ['less', 'copy'],
-			},
-			scripts: {
-			    files: ['**/*.js'],
-			    tasks: ['concat', 'uglify', 'copy', 'watch'],
-			},
+			another: {
+			    files: ['src/icons/*', 'src/fonts/*', 'src/images/*', 'src/index.html'],
+			    tasks: ['copy'],
+		    },
+   		    css: {
+    		    files: ['**/*.css', '**/*.less'],
+    		    tasks: ['less', 'copy'],
+        	},
+    		scripts: {
+  			    files: ['**/*.js'],
+ 			    tasks: ['concat', 'uglify', 'copy', 'watch'],
+ 			},
 		},
 
 	});
