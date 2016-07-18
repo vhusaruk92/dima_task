@@ -4,7 +4,7 @@ module.exports=function(grunt){
 
 	    concat: {
 			dist: {
-			   src: ['src/js/lightslider.js','src/js/index.js'],
+			   src: ['src/js/index.js'],
 			   dest: 'temp/concat.js',
 			},
 		},
@@ -52,6 +52,7 @@ module.exports=function(grunt){
 		      {expand: true, flatten: true, src: ['src/icons/*'], dest: 'temp/icons/'},
 		      {expand: true, flatten: true, src: ['src/fonts/*'], dest: 'temp/fonts/'},
 		      {expand: true, flatten: true, src: ['src/images/*'], dest: 'temp/images/'},
+		      {expand: true, src: ['bower_components/**/*'], dest: 'temp/'}
 		    ],
 		  },
 		},
