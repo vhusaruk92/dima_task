@@ -24,22 +24,10 @@ module.exports=function(grunt){
 		less: {
 		  development: {
 		    options: {
-		      paths: ['assets/css']
+		      paths: ['assets/less']
 		    },
 		    files: {
-		      'temp/result.css': 'src/css/*.less'
-		    }
-		  },
-		  production: {
-		    options: {
-		      paths: ['assets/css'],
-		      plugins: [
-		        new (require('less-plugin-autoprefix'))({browsers: ["last 2 versions"]}),
-		        new (require('less-plugin-clean-css'))
-		      ],
-		    },
-		    files: {
-		      'temp/result.css': 'src/css/*.less'
+		      'temp/styles.css': 'src/less/style.less'
 		    }
 		  }
 		},
@@ -48,7 +36,6 @@ module.exports=function(grunt){
 		  main: {
 		    files: [
 		      {expand: true, flatten: true, src: ['src/index.html'], dest: 'temp/'},
-		    
 		      {expand: true, flatten: true, src: ['src/icons/*'], dest: 'temp/icons/'},
 		      {expand: true, flatten: true, src: ['src/fonts/*'], dest: 'temp/fonts/'},
 		      {expand: true, flatten: true, src: ['src/images/*'], dest: 'temp/images/'},
@@ -62,8 +49,8 @@ module.exports=function(grunt){
 			    files: ['src/icons/*', 'src/fonts/*', 'src/images/*', 'src/index.html'],
 			    tasks: ['copy'],
 		    },
-   		    css: {
-    		    files: ['**/*.css', '**/*.less'],
+   		    less: {
+    		    files: ['**/*.less'],
     		    tasks: ['less', 'copy'],
         	},
     		scripts: {
@@ -92,6 +79,7 @@ module.exports=function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-connect');
+	
 
 
 	grunt.registerTask('default',['concat', 'uglify', 'less', 'copy','connect', 'watch']);

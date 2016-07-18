@@ -17,7 +17,9 @@
   "devDependencies": {
     "bootstrap": "^3.3.6",
     "lightslider": "^1.1.5",
-    "font-awesome": "fontawesome#^4.6.3",
-    "ajax": "^2.1.2"
+    "ajax": "^2.1.2",
+    "font-awesome": "4.2",
+    "jquery": "^3.1.0",
+    "AniJS": "anijs#^0.9.3"
   }
 }
