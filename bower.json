@@ -1,0 +1,23 @@
+{
+  "name": "pixelant",
+  "description": "",
+  "main": "index.html",
+  "authors": [
+    "Viktoria Husaruk <vhusaruk92@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/vhusaruk92/dima_task",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "^3.3.6",
+    "lightslider": "^1.1.5",
+    "font-awesome": "fontawesome#^4.6.3",
+    "ajax": "^2.1.2"
+  }
+}
