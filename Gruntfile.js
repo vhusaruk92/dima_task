@@ -1,8 +1,9 @@
 module.exports=function(grunt){
+
 	grunt.initConfig({
 		pkg:grunt.file.readJSON('package.json'),
 
-	    concat: {
+	  concat: {
 			dist: {
 			   src: ['src/js/index.js'],
 			   dest: 'temp/concat.js',
@@ -44,30 +45,34 @@ module.exports=function(grunt){
 		  },
 		},
 
+		connect: {
+	      server: {
+	        options: {
+	        port: 9000,
+	        base: 'temp/.',
+	        hostname: '0.0.0.0',
+	        protocol: 'http',
+	        livereload: true,
+	        open: true,
+	        }
+	      }
+	    },
+
 		watch: {
 			another: {
 			    files: ['src/icons/*', 'src/fonts/*', 'src/images/*', 'src/index.html'],
 			    tasks: ['copy'],
 		    },
    		    less: {
-    		    files: ['**/*.less'],
+    		    files: ['src/**/*.less'],
     		    tasks: ['less', 'copy'],
         	},
     		scripts: {
-  			    files: ['**/*.js'],
- 			    tasks: ['concat', 'uglify', 'copy', 'watch'],
+  			    files: ['src/**/*.js'],
+ 			    tasks: ['concat', 'uglify', 'copy'],
  			},
-		},
-
-		connect: {
-		    server: {
-		      options: {
-		        port: 9001,
-		        base: 'temp/.',
-		        open:true,
-		        protocol:'http',
-		        keepalive: true
-		      }
+ 			options: {
+		        livereload: true,
 		    },
 		},
 
@@ -79,9 +84,9 @@ module.exports=function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-connect');
-	
 
 
-	grunt.registerTask('default',['concat', 'uglify', 'less', 'copy','connect', 'watch']);
+	grunt.registerTask('default',['concat', 'uglify', 'less', 'copy']);
+	grunt.registerTask('server', ['connect','watch']);
 
 };
