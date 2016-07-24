@@ -1,7 +1,10 @@
 @color_1: #000;
+@color_2: black;
+@color_3: #757474;
 @font-family_1: "Poppins";
 @font-family_2: "Poppins-Light";
 /* SLIDER*/
+
 .arrow {
 	width: 24px;
 	height: 45px;
@@ -9,7 +12,8 @@
 }
 .item {
 	img {
-		width: 100%;
+	width: 100%;
+	min-height: 280px;
 	}
 }
 .carousel-control {
@@ -30,6 +34,7 @@
 .slider-block {
 	background-color: #efefef;
 	padding: 0 5%;
+	min-height: 240px;
 }
 .button-call {
 	float: left;
@@ -42,10 +47,13 @@
 h1 {
 	font-size: 40px;
 	font-family: @font-family_1;
+	color:@color_2;
 }
 .text-slider {
 	font-family: @font-family_2;
 	font-size: 20px;
+	color:@color_3;
+
 }
 .carousel-indicators {
 	li {
@@ -59,11 +67,41 @@ h1 {
 		height: 9px;
 	}
 }
-@media screen and (max-width: 1430px) {
+
+@media screen and (max-width: 1439px) {
 	.text-slider {
 		font-size: 12px;
 	}
 	h1 {
-		font-size: 26px;
+		font-size: 20px;
+	}
+	.carousel-caption {
+		right: 40%;
+		left: 8%;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.slider-block {
+		padding: 0 0;
+		min-height: 240px;
+	}
+	.slider_1{
+		padding: 0;
+	}
+	.carousel-caption {
+		right: 15%;
+		left: 15%;
+	}
+	.text-slider {
+		font-size: 10px;
+	}
+	h1 {
+		font-size: 16px;
+	}
+	.arrow{
+		width: 12px;
+    height: 22px;
+    margin-top: 120px;
 	}
 }

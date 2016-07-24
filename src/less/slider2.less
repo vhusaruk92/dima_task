@@ -1,25 +1,45 @@
 
 .slider2 {
-	padding: 0 5%;
+	padding: 5% 5%;
 }
 ul#lightSlider {
 	li {
-		margin: 0 5px 0 10px !important;
+		margin: 0px 0px 0px 17px!important;
+		width: 10%;
 	}
 }
+
 .lSSlideOuter {
 	.lSPager.lSpg {
 		>li {
 			a {
-				display: none;
+				display: none!important;
 			}
 		}
 	}
 }
 #lightSlider {
 	img {
-		width: 60%;
+		width: 50%;
 		height: auto;
-		padding: 15%;
+		padding: 0;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 1430px) {
+	ul#lightSlider {
+		li {
+			margin: 0px 0px 0px 20px!important;
+			width: 10%;
+		}
+	}
+	#lightSlider {
+		img {
+			width: 70%;
+			height: auto;
+			padding: 0;
+			text-align: center;
+		}
 	}
 }

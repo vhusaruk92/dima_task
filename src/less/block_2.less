@@ -5,31 +5,35 @@
 	margin: 0 5%;
 }
 .block2marg {
-	margin: 0 auto;
+	margin-top: 10px;
 	margin-bottom: 60px;
 }
+
 .place1 {
-	float: left;
-	background-image: url(./images/image1.png);
-	height: 320px;
-	width: 100%;
-	background-size: 100%;
-	background-repeat: no-repeat;
-	padding-right: 0px;
-	padding-left: 0px;
+		float: left;
+		background-image: url(../images/image1.png);
+		height: 320px;
+		width: 100%;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		padding-right: 0px;
+		padding-left: 0px;
 }
 .subplace {
 	overflow: hidden;
-	height: 140px;
+	height: 167px;
 	width: 100%;
 	background-color: #47a5de;
 	color: @color_1;
-	margin-top: 200px;
-	font-size: 15px;
+	margin-top: 173px;
 	transition: 1s;
 	padding-left: 15px;
 	h3 {
 		color: @color_2;
+	}
+	p{
+		margin: 5px;
+		font-size: 13px;
 	}
 }
 .placeClick {
@@ -39,7 +43,7 @@
 }
 .place2 {
 	float: left;
-	background-image: url(./images/image2.png);
+	background-image: url(../images/image2.png);
 	height: 320px;
 	width: 100%;
 	background-size: 100%;
@@ -49,7 +53,7 @@
 }
 .place3 {
 	float: left;
-	background-image: url(./images/image3.png);
+	background-image: url(../images/image3.png);
 	height: 320px;
 	width: 100%;
 	background-size: 100%;
@@ -61,11 +65,97 @@ p.click {
 	background-color: #47a5de;
 	color: @color_1;
 	padding-left: 15px;
+	padding-bottom: 10px;
+  padding-top: 10px;
 	text-decoration: underline;
 	cursor: pointer;
 }
 .click {
 	span {
 		display: none;
+	}
+}
+
+@media screen and (min-width: 425px) {
+	.subplace {
+		p{
+			margin: 5px;
+			font-size: 15px;
+		}
+	}
+}
+@media screen and (min-width: 768px) {
+	.place1,.place2,.place3 {
+			height: 340px;
+	}
+	.subplace {
+		height: 180px;
+		margin-top: 140px;
+	}
+
+		p{
+			font-size: 12px;
+		}
+	.placeClick {
+		transition: 1s;
+		height: 320px;
+		margin-top: 0px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.place1,.place2,.place3 {
+			height: 340px;
+	}
+	.subplace {
+		height: 140px;
+		margin-top: 200px;
+	}
+
+		p{
+			font-size: 12px;
+		}
+	.placeClick {
+		transition: 1s;
+		height: 340px;
+		margin-top: 0px;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.place1,.place2,.place3 {
+			height: 370px;
+	}
+	.subplace {
+		height: 100px;
+		margin-top: 270px;
+	}
+
+		p{
+			font-size: 17px;
+		}
+	.placeClick {
+		transition: 1s;
+		height: 370px;
+		margin-top: 0px;
+	}
+}
+
+@media screen and (min-width: 2560px) {
+	.place1,.place2,.place3 {
+			height: 510px;
+	}
+	.subplace {
+		height: 160px;
+		margin-top: 350px;
+	}
+
+		p{
+			font-size: 17px;
+		}
+	.placeClick {
+		transition: 1s;
+		height: 510px;
+		margin-top: 0px;
 	}
 }

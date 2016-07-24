@@ -4,10 +4,22 @@ module.exports=function(grunt){
 		pkg:grunt.file.readJSON('package.json'),
 
 	  concat: {
-			dist: {
-			   src: ['src/js/index.js'],
-			   dest: 'temp/concat.js',
+			main: {
+			  src: ['src/js/index.js'],
+			  dest: 'temp/js/main.js',
 			},
+			jquery: {
+				src:['bower_components/jquery/dist/jquery.min.js'],
+				dest:'temp/js/jquery.js'
+			},
+			bootsrap: {
+				src:['bower_components/bootstrap/dist/js/bootstrap.min.js'],
+				dest:'temp/js/bootstrap.js'
+			},
+			components: {
+				src:['bower_components/AniJS/dist/anijs-min.js', 'bower_components/AniJS/dist/helpers/scrollreveal/anijs-helper-scrollreveal-min.js', 'bower_components/AniJS/dist/helpers/scrollreveal/anijs-helper-scrollreveal-min.js', 'bower_components/lightslider/dist/js/lightslider.min.js'],
+				dest:'temp/js/components.js'
+			}
 		},
 
 		uglify: {
@@ -17,9 +29,10 @@ module.exports=function(grunt){
 			        '<%= grunt.template.today("yyyy-mm-dd") %> */\n',
 			},
 		    build: {
-		      src:'temp/concat.js',
-		      dest:'temp/concat.min.js'
+		      src:'temp/js/main.js',
+		      dest:'temp/js/main.js'
 		    }
+
 		},
 
 		less: {
@@ -28,8 +41,10 @@ module.exports=function(grunt){
 		      paths: ['assets/less']
 		    },
 		    files: {
-		      'temp/styles.css': 'src/less/style.less'
-		    }
+		      'temp/css/main.css': 'src/less/style.less',
+					'temp/css/components.css': 'src/less/components.less',
+					'temp/css/bootsrap.css': 'src/less/bootsrap.less'
+		    },
 		  }
 		},
 
@@ -52,7 +67,7 @@ module.exports=function(grunt){
 	        base: 'temp/.',
 	        hostname: '0.0.0.0',
 	        protocol: 'http',
-	        livereload: true,
+	        livereload:35729,
 	        open: true,
 	        }
 	      }

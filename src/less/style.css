@@ -35,7 +35,7 @@ font-weight: normal;
 
 
 
-body,div,dl,dt,dd,ul,ol,li,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+body,div,dl,dt,dd,ul,ol,li,pre,form,fieldset,input,textarea,p,blockquote,th,td {
 	margin:0;
 	padding:0;
 }
@@ -94,7 +94,7 @@ ul.tools_menu li:hover i.fa{
 
 i.fa-search{
 	margin: 0;
-	color: #fff;	
+	color: #fff;
 }
 
 .search::-webkit-input-placeholder { color: #FFF; text-align: left;}
@@ -135,7 +135,7 @@ i.fa-search{
 }
 
 #light-logo{
-	font-family:"Poppins-Light";	
+	font-family:"Poppins-Light";
 	font-size: 39.931px;
 }
 
@@ -172,7 +172,7 @@ ul.navigation li{
 }
 
 ul.subnavigation li{
-	display:block;	
+	display:block;
 	height: 20px;
 	width: 102.67188px;
 	font-family:"Poppins-Light";
@@ -295,7 +295,7 @@ h1{
 	width: 9px;
     height: 9px;
 }
-	
+
 
 @media screen and (max-width: 1430px) {
 	.text-slider{
@@ -372,7 +372,7 @@ height:320px;
 width:100%;
 background-size:100%;
 background-repeat: no-repeat;
-padding-right: 0px; 
+padding-right: 0px;
 padding-left: 0px;
 
 
@@ -401,8 +401,8 @@ height:320px;
 width:100%;
 background-size:100%;
 background-repeat: no-repeat;
-padding-right: 0px; 
-padding-left: 0px; 
+padding-right: 0px;
+padding-left: 0px;
 }
 .place3{
 float:left;
@@ -411,7 +411,7 @@ height:320px;
 width:100%;
 background-size:100%;
 background-repeat: no-repeat;
-padding-right: 0px; 
+padding-right: 0px;
 padding-left: 0px;
 }
 p.click{background-color: #47a5de;
@@ -466,7 +466,7 @@ ul#lightSlider li{
 }
 												/* Quotes*/
 .block3{
-	background-color:#ededed; 
+	background-color:#ededed;
 	padding-left: 10%;
 	padding-right: 10%;
 	padding:1% 5% 1% 5%;
@@ -514,7 +514,7 @@ ul#lightSlider li{
 	border-radius:5%;
 	background-color: #fff;
 	padding: 3% 5%;
-}  
+}
 
 .triangle-icon{
 	padding:0;
@@ -525,7 +525,7 @@ ul#lightSlider li{
 
 												/* FOOTER*/
 .footer-bock{
-	background-color:#898989; 
+	background-color:#898989;
 	padding-left: 10%;
 	padding-right: 10%;
 	padding:1% 5% 1% 5%;

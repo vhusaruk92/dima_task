@@ -290,29 +290,35 @@
 }
 .lSAction {
 	>a {
-		width: 32px;
+		width: 50px;
 		display: block;
-		top: 50%;
+		top: 1%;
 		height: 32px;
-		background-image: url('./images/controls.png');
+		background-color: white;
 		cursor: pointer;
 		position: absolute;
 		z-index: 99;
-		margin-top: -16px;
-		opacity: 0.5;
-		-webkit-transition: opacity 0.35s linear 0s;
-		transition: opacity 0.35s linear 0s;
-		&:hover {
-			opacity: 1;
-		}
+		padding-top: 20%;
+
 	}
 	>.lSPrev {
-		background-position: 0 0;
-		left: 10px;
+		background-image: url('../icons/arrow-left.png');
+		background-repeat: no-repeat;
+		background-position: 20% 20%;
+		background-size: 20px;
+		left: -2px;
+		display: block;
+		opacity: 1;
+		height: 100%;
+		position: absolute;
+		z-index: 100;
 	}
 	>.lSNext {
-		background-position: -32px 0;
-		right: 10px;
+		background-image: url('../icons/arrow-right.png');
+		background-repeat: no-repeat;
+		background-position: 50% 20%;
+		background-size: 20px;
+		right: -2px;
 	}
 	>a.disabled {
 		pointer-events: none;
@@ -345,7 +351,7 @@
 		}
 		>.lSNext {
 			background-position: 31px -31px;
-			bottom: 10px;
+			bottom: 20px;
 			top: auto;
 		}
 		>.lSPrev {
