@@ -5,9 +5,9 @@
 @color_6: rgb(71, 165, 222);
 @font-family_1: "Poppins-Light",Arial, Helvetica, sans-serif;
 @font-family_2: "Arial";
-@font-family_3: "Poppins-SemiBold";
+@font-family_3: "Roboto-Medium";
 @font-family_4: "Poppins-Light";
-@font-family_5: "Poppins-SemiBold",Arial, Helvetica, sans-serif;
+@font-family_5: "Roboto-Medium",Arial, Helvetica, sans-serif;
 
 .form-control {
 	padding-top: 0;
@@ -27,10 +27,12 @@ ul.tools_menu {
 		line-height: 0.751;
 		font-family: @font-family_1;
 		font-style: italic;
-		padding-left: 0%;
+		padding-left: 0;
 		font-size: 11px;
 		&:hover {
-			i.fa {
+			.fa {
+				margin-right: 3px;
+				margin-left: 5px;
 				color: @color_2;
 				-webkit-transition: 0.2s;
 				-moz-transition: 0.2s;
@@ -39,11 +41,7 @@ ul.tools_menu {
 		}
 	}
 }
-i.fa {
-	color: @color_1;
-	margin-right: 3px;
-	margin-left: 5px;
-}
+
 .search {
 	padding: 0;
 
@@ -97,7 +95,7 @@ i.fa {
 			}
 	}
 }
-i.fa-search {
+.fa-search {
 	margin: 0;
 	color: @color_1;
 
@@ -138,7 +136,7 @@ i.fa-search {
 	clear: both;
 	padding-top: 0;
 }
-ul.navigation {
+.navigation {
 	li {
 		display: inline-block;
 		text-decoration: none;
@@ -158,7 +156,7 @@ ul.navigation {
 		}
 	}
 }
-ul.subnavigation {
+.subnavigation {
 	li {
 		display: block;
 		height: 20px;
@@ -215,7 +213,7 @@ li {
 		}
 	}
 }
-i.fa-chevron-down {
+.fa-chevron-down {
 	color: @color_6;
 	margin-left: 2px;
 	margin-right: 0;

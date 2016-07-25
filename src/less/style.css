@@ -6,13 +6,6 @@ font-weight: normal;
 }
 
 @font-face{
-src: url("../fonts/Poppins-SemiBold.ttf");
-font-family:"Poppins-SemiBold";
-font-style: normal;
-font-weight: normal;
-}
-
-@font-face{
 src: url("../fonts/Poppins-Light.ttf");
 font-family:"Poppins-Light";
 font-style: normal;
@@ -60,7 +53,7 @@ ul.tools_menu li{
 	line-height: 0.751;
 	font-family: "Poppins-Light",Arial, Helvetica, sans-serif;
 	font-style: italic;
-	padding-left: 0%;
+	padding-left: 0;
 	font-size:12px;
 }
 
@@ -92,7 +85,7 @@ ul.tools_menu li:hover i.fa{
 	font-size:12px;
 }
 
-i.fa-search{
+.fa-search{
 	margin: 0;
 	color: #fff;
 }
@@ -312,13 +305,13 @@ h1{
 
 .block1{
 	text-align: center;
-	margin:10% 5% 0% 5%;
+	margin:10% 5% 0 5%;
 }
 
 .round-box{
 	display:inline-block;
 	border-radius:100%;
-	border:solid 0px;
+	border:solid 0;
 	padding: 8%;
 }
 .icons-services{
@@ -372,8 +365,8 @@ height:320px;
 width:100%;
 background-size:100%;
 background-repeat: no-repeat;
-padding-right: 0px;
-padding-left: 0px;
+padding-right: 0;
+padding-left: 0;
 
 
 }
@@ -392,7 +385,7 @@ padding-left:15px;
 .placeClick{
 transition:1s;
 height:340px;
-margin-top:0px;
+margin-top:0;
 }
 .place2{
 float:left;
@@ -401,8 +394,8 @@ height:320px;
 width:100%;
 background-size:100%;
 background-repeat: no-repeat;
-padding-right: 0px;
-padding-left: 0px;
+padding-right: 0;
+padding-left: 0;
 }
 .place3{
 float:left;
@@ -411,8 +404,8 @@ height:320px;
 width:100%;
 background-size:100%;
 background-repeat: no-repeat;
-padding-right: 0px;
-padding-left: 0px;
+padding-right: 0;
+padding-left: 0;
 }
 p.click{background-color: #47a5de;
     color: white;
@@ -452,7 +445,7 @@ p.click{background-color: #47a5de;
 .slider2{
 	padding: 0 5%;
 }
-ul#lightSlider li{
+#lightSlider li{
 	margin:0 5px 0 10px !important;
 }
 .lSSlideOuter .lSPager.lSpg > li a{

@@ -48,6 +48,18 @@ module.exports=function(grunt){
 		  }
 		},
 
+		csslint: {
+		  options: {
+		    csslintrc: '.csslintrc'
+		  },
+	    strict: {
+	        options: {
+	            import: 2
+	        },
+	        src: ['temp/css/main.css']
+	    }
+		},
+
 		copy: {
 		  main: {
 		    files: [
@@ -99,9 +111,9 @@ module.exports=function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-connect');
+	grunt.loadNpmTasks('grunt-contrib-csslint');
 
-
-	grunt.registerTask('default',['concat', 'uglify', 'less', 'copy']);
+	grunt.registerTask('default',['concat', 'uglify', 'less', 'copy', 'csslint']);
 	grunt.registerTask('server', ['connect','watch']);
 
 };
