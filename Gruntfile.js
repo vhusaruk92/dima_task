@@ -47,6 +47,14 @@ module.exports=function(grunt){
 		    },
 		  }
 		},
+		htmlhint: {
+		  options: {
+		    htmlhintrc: '.htmlhintrc'
+		  },
+		  html1: {
+		    src: ['temp/index.html']
+		  }
+		},
 
 		csslint: {
 		  options: {
@@ -88,11 +96,11 @@ module.exports=function(grunt){
 		watch: {
 			another: {
 			    files: ['src/icons/*', 'src/fonts/*', 'src/images/*', 'src/index.html'],
-			    tasks: ['copy'],
+			    tasks: ['copy', 'htmlhint'],
 		    },
    		    less: {
     		    files: ['src/**/*.less'],
-    		    tasks: ['less', 'copy'],
+    		    tasks: ['less', 'copy','csslint'],
         	},
     		scripts: {
   			    files: ['src/**/*.js'],
@@ -112,8 +120,9 @@ module.exports=function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-csslint');
+	grunt.loadNpmTasks('grunt-htmlhint');
 
-	grunt.registerTask('default',['concat', 'uglify', 'less', 'copy', 'csslint']);
+	grunt.registerTask('default',['concat', 'uglify', 'less', 'copy', 'csslint', 'htmlhint']);
 	grunt.registerTask('server', ['connect','watch']);
 
 };
