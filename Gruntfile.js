@@ -22,6 +22,15 @@ module.exports=function(grunt){
 			}
 		},
 
+		jshint: {
+			options: {
+		    jshintrc: '.jshintrc'
+		  },
+			files: {
+        src: ['temp/js/main.js']
+      },
+	  },
+
 		uglify: {
 			options: {
 			 stripBanners: true,
@@ -47,6 +56,7 @@ module.exports=function(grunt){
 		    },
 		  }
 		},
+
 		htmlhint: {
 		  options: {
 		    htmlhintrc: '.htmlhintrc'
@@ -121,8 +131,9 @@ module.exports=function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-csslint');
 	grunt.loadNpmTasks('grunt-htmlhint');
+	grunt.loadNpmTasks('grunt-contrib-jshint');
 
-	grunt.registerTask('default',['concat', 'uglify', 'less', 'copy', 'csslint', 'htmlhint']);
+	grunt.registerTask('default',['concat', 'jshint', 'uglify', 'less', 'copy', 'csslint', 'htmlhint']);
 	grunt.registerTask('server', ['connect','watch']);
 
 };
