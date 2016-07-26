@@ -28,8 +28,18 @@ module.exports=function(grunt){
 		  },
 			files: {
         src: ['temp/js/main.js']
-      },
+      }
 	  },
+
+		jscs: {
+			files: {
+				src: ['temp/js/main.js']
+			},
+			options: {
+				config: ".jscsrc",
+  			fix: true
+			}
+		},
 
 		uglify: {
 			options: {
@@ -132,8 +142,9 @@ module.exports=function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-csslint');
 	grunt.loadNpmTasks('grunt-htmlhint');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks("grunt-jscs");
 
-	grunt.registerTask('default',['concat', 'jshint', 'uglify', 'less', 'copy', 'csslint', 'htmlhint']);
+	grunt.registerTask('default',['concat', 'jshint', 'jscs', 'uglify', 'less', 'copy', 'csslint', 'htmlhint']);
 	grunt.registerTask('server', ['connect','watch']);
 
 };
